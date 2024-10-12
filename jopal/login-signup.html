@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+<!-- <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <title>Login/Signup Page</title>
+</head>
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form  action="plugins/actions//staff-operations.php" method="post">
+
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="icons"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="icons"><i class="fa-brands fa-linkedin"></i></a> 
+                </div>
+                <span>or use your phone number to register for an account</span>
+                <input type="text" placeholder="FullName" name = "fullname" required>
+                <input type="text" placeholder="UserName" name = "username" required>
+                <input type="text" class="form-control"placeholder="+233 2005005090" id="phone" name="phone" required>
+                <input type="password" placeholder="Password" name = "password" required>
+                
+                <div class="input-group ">
+                    <input type="date" class="form-control" style="width: 20vh;" id="date_of_birth" name="dob" required >
+
+                    <select class="form-select" name="gender" id="gender" required>
+                        <option disabled>Gender</option>
+                        <option value="male">male</option>
+                        <option value="female">female</option>
+                      </select>
+                </div>
+                  
+               
+    
+                <input type="text" class="form-control" id="access" placeholder="access codes" name="access" required>
+                <label for="position">Enter the codes provided you</label>
+                     
+                <button type="submit">Click to Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form  action="plugins/actions//staff-signin.php" method="post">
+                <h1>Sign-In</h1>
+                <div class="social-icons">
+                    <a href="#" class="icons"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="icons"><i class="fa-brands fa-linkedin"></i></a> 
+                </div>
+                <span>Just use your username and password</span>
+                <input type="username" placeholder="username" name = "username" required>
+                <input type="password" placeholder="Password" name = "password" required>
+                <a  href="#">Forgot Your Password</a>
+
+                <button type="submit">Click to Sign In </button>
+            </form> 
+        </div>
+        
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Hello there!</h1>
+                    <p>Register with the appropriate required 
+                    details in order to have access to
+                    all the features of this website</p>
+                    <p>OR</p>
+                    <button class="hidden"  id="Login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter the appropriate required 
+                    details in order to have access to
+                    all the features of this website</p>
+                    <p>OR</p>
+                    <button class="hidden"  id="Register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+<script src="plugins/assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
